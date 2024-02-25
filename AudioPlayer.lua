@@ -1,3 +1,13 @@
+local function sharedRequire(filename)
+    local url = "https://raw.githubusercontent.com/Kokuen0245/Deepwoken/main/" .. filename
+    local response = game:HttpGet(url)
+    if response then
+        return require(response)
+    else
+        error("Error fetching module: " .. filename)
+    end
+end
+
 local Maid = sharedRequire('@utils/Maid.lua');
 local Services = sharedRequire('@utils/Services.lua');
 local library = sharedRequire('@UILibrary.lua');
