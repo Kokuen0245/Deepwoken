@@ -8,9 +8,9 @@ local function sharedRequire(filename)
     end
 end
 
-local Maid = sharedRequire('@utils/Maid.lua');
-local Services = sharedRequire('@utils/Services.lua');
-local library = sharedRequire('@UILibrary.lua');
+local Maid = sharedRequire('Maid.lua');
+local Services = sharedRequire('Services.lua');
+local library = sharedRequire('UILibrary.lua');
 
 local RunService = Services:Get('RunService');
 
